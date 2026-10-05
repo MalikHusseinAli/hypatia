@@ -1,0 +1,27 @@
+{
+  "name": "hypatia",
+  "description": "Hypatia is a social network for readers and academic researchers",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Malik Hussein Ali",
+    "email": "malik.hussein.ali.68@gmail.com",
+    "url": "https://malikhusseinali.surge.sh"
+  },
+  "scripts": {
+    "build:client": "npm run build --prefix client",
+    "prestart": "npm run build:client",
+    "start": "node ./bin/www",
+    "dev:server": "node --watch ./bin/www",
+    "dev:client": "npm run dev --prefix client",
+    "install:client": "npm install --prefix client",
+    "install:all": "npm install && npm run install:client",
+    "clean": "rimraf public/*"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1"
+  }
+}
